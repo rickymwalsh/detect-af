@@ -12,9 +12,9 @@ The dataset used in this study was preprocessed ECG data from the Erasmus Medica
 #### Method
 The beats were first grouped into 30-beat segments. Then, relevant features were identified in the literature, including root mean square of successive differences (RMSSD), Shannon entropy, and turning point ratio \[5\], histograms of the RRI \[6\], histograms of the differences between successive RRI \[7\], and finally summary statistics such as mean, min, variance, etc. These features were then used to train Decision Tree and XGBoost models.
 
-<kbd><img src="figures/Entropy Histograms.png" width=200px height=200px /></kbd>
-<kbd><img src="figures/RMSSD Histogram.png" width=200px height=200px /></kbd>
-<kbd><img src="figures/TPR Histogram.png" width=200px height=200px /></kbd>
+The figures below show the distributions of the Shannon Entropy and RMSSD, respectively. There are clear differences between the AF and non-AF groups of beat segments.
+<kbd><img src="figures/Entropy Histograms.png" width=400px height=400px /></kbd>
+<kbd><img src="figures/RMSSD Histogram.png" width=400px height=400px /></kbd>
 
 #### Results
 Ultimately, a Sensitivity of 97.2% and Specificity of 99.3% was achieved when predicting whether each 30-beat segment is Atrial Fibrillation or not, improving on the older studies taking purely statistical or heuristic approaches, and comparable to studies involving the use of deep learning approaches \[8\] (this study used a different dataset, however, so the results can not be compared directly).
